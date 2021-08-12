@@ -1,0 +1,14 @@
+{
+  "name": "cine-vs-casa",
+  "version": "1.0.0",
+  "description": "JS Challenge de Platzi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Gaston Corbalan",
+  "license": "MIT"
+}
