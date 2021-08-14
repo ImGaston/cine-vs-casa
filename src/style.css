@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 1.5fr 0.5fr 1.5fr 1fr 1fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "HEADER HEADER HEADER HEADER"
+        "H2 H2 H2 H2"
+        "NUMERO NUMERO NUMERO NUMERO"
+        "H3 H3 H3 H3"
+        "N A D H"
+        "BOTON BOTON BOTON BOTON"
+        "PARRAFO PARRAFO PARRAFO PARRAFO"
+        "FOOTER FOOTER FOOTER FOOTER";
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.HEADER {
+    grid-area: HEADER;
+    place-self: center;
+}
+
+.H2 {
+    grid-area: H2;
+    place-self: center;
+}
+
+.NUMERO {
+    grid-area: NUMERO;
+    place-self: center;
+}
+
+.H3 {
+    grid-area: H3;
+    place-self: center;
+}
+
+.N {
+    grid-area: N;
+    place-self: center;
+}
+
+.A {
+    grid-area: A;
+    place-self: center;
+}
+
+.D {
+    grid-area: D;
+    place-self: center;
+}
+
+.H {
+    grid-area: H;
+    place-self: center;
+}
+
+.BOTON {
+    grid-area: BOTON;
+    place-self: center;
+}
+
+.PARRAFO {
+    grid-area: PARRAFO;
+    place-self: center;
+}
+
+.FOOTER {
+    grid-area: FOOTER;
+    place-self: center;
+}
+
+input[type="checkbox"][id^="myCheckbox"] {
+    display: none;
+}
+
+label {
+    border: 1px solid #fff;
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+label img {
+    height: 100px;
+    width: 100px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+    border-radius: 22.5%;
+}
+
+label:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+}
+
+:checked+label {
+    border-color: #ddd;
+}
+
+:checked+label:before {
+    content: none;
+    background-color: grey;
+    transform: scale(1);
+}
+
+:checked+label img {
+    transform: scale(0.9);
+    /* box-shadow: 0 0 5px #333; */
+    z-index: -1;
+}
+
+.button {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 0.6em;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
