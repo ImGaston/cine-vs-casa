@@ -7,7 +7,7 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 0.5fr 1.5fr 0.5fr 1.5fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 1.5fr 0.5fr auto 1fr 1fr 0.5fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -15,7 +15,7 @@
         "H2 H2 H2 H2"
         "NUMERO NUMERO NUMERO NUMERO"
         "H3 H3 H3 H3"
-        "N A D H"
+        "N N N N"
         "BOTON BOTON BOTON BOTON"
         "PARRAFO PARRAFO PARRAFO PARRAFO"
         "FOOTER FOOTER FOOTER FOOTER";
@@ -46,22 +46,12 @@
 
 .N {
     grid-area: N;
-    place-self: center;
-}
-
-.A {
-    grid-area: A;
-    place-self: center;
-}
-
-.D {
-    grid-area: D;
-    place-self: center;
-}
-
-.H {
-    grid-area: H;
-    place-self: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .BOTON {
@@ -77,6 +67,12 @@
 .FOOTER {
     grid-area: FOOTER;
     place-self: center;
+}
+
+.app {
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: center; */
 }
 
 input[type="checkbox"][id^="myCheckbox"] {
